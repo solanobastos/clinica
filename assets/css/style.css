@@ -20,13 +20,38 @@ body {
 
 :root {
 
+    /* CORES PRINCIPAIS */
+
     --primary: #2c7a7b;
-    --secondary: #4fd1c5;
+    --primary-dark: #245f60;
+    --primary-light: #4fd1c5;
 
-    --dark: #1a202c;
-    --light: #ffffff;
+    /* CORES SECUNDÁRIAS */
 
-    --gray: #718096;
+    --secondary: #38b2ac;
+    --secondary-light: #81e6d9;
+
+    /* TEXTO */
+
+    --text-dark: #1a202c;
+    --text-medium: #4a5568;
+    --text-light: #718096;
+
+    /* FUNDOS */
+
+    --background: #ffffff;
+    --background-soft: #f8fafc;
+    --background-gray: #edf2f7;
+
+    /* BORDAS */
+
+    --border: #e2e8f0;
+
+    /* SOMBRAS */
+
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, .05);
+
 }
 
 /* CONTAINER */
@@ -57,22 +82,33 @@ body {
 
 .header .container {
 
-    height: 80px;
+    display: grid;
 
-    display: flex;
+    grid-template-columns: 250px 1fr 250px;
 
     align-items: center;
 
-    justify-content: space-between;
+    padding: 20px 0;
+
 }
 
 .logo {
+    justify-self: center;
+}
 
-    font-size: 1.6rem;
+.logo img {
+    
 
-    font-weight: 700;
+    max-height: 40px;
 
-    color: var(--primary);
+    width: auto;
+
+    display: block;
+
+}
+
+.nav {
+    justify-self: center;
 }
 
 .menu {
@@ -88,12 +124,14 @@ body {
 
     text-decoration: none;
 
-    color: var(--dark);
+    color: var(--text-dark);
 
     font-weight: 500;
 }
 
 .btn-header {
+
+    justify-self: center;
 
     text-decoration: none;
 
@@ -308,6 +346,51 @@ body {
     color: var(--gray);
 }
 
+.mission-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    margin-top: 70px;
+}
+
+.mission-card {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+
+    transition: .3s;
+}
+
+.mission-card:hover {
+
+    transform: translateY(-8px);
+}
+
+.mission-card h3 {
+
+    color: var(--primary);
+
+    margin-bottom: 20px;
+}
+
+.mission-card p {
+
+    color: var(--gray);
+
+    line-height: 1.7;
+}
+
 /* ==========================
    ESPECIALIDADES
 ========================== */
@@ -466,84 +549,6 @@ body {
 }
 
 /* ==========================
-   EQUIPE
-========================== */
-
-.team {
-
-    padding: 120px 0;
-}
-
-.team-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 30px;
-}
-
-.team-card {
-
-    background: white;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    text-align: center;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
-
-    transition: .3s;
-}
-
-.team-card:hover {
-
-    transform: translateY(-8px);
-}
-
-.team-photo {
-
-    height: 280px;
-
-    background: #e2e8f0;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-weight: 700;
-
-    color: #64748b;
-}
-
-.team-card h3 {
-
-    margin-top: 25px;
-}
-
-.team-card span {
-
-    display: block;
-
-    color: var(--primary);
-
-    margin: 10px 0 20px;
-}
-
-.team-card p {
-
-    padding: 0 25px 30px;
-
-    color: var(--gray);
-
-    line-height: 1.7;
-}
-
-/* ==========================
    RESPONSIVIDADE
 ========================== */
 
@@ -596,6 +601,11 @@ body {
     .differentials-grid,
     .team-grid,
     .stats-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .mission-grid {
 
         grid-template-columns: 1fr;
     }

@@ -97,7 +97,7 @@ body {
 }
 
 .logo img {
-    
+
 
     max-height: 40px;
 
@@ -147,47 +147,32 @@ body {
 /* HERO */
 
 .hero {
-
-    height: 100vh;
-
-    background: linear-gradient(135deg,
-            #2c7a7b,
-            #4fd1c5);
-
-    background-size: cover;
-
-    background-position: center;
-
     position: relative;
+    min-height: 100vh;
+
+    background-image: url('/assets/images/fachada.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
-    text-align: center;
+    padding: 0 20px;
 }
 
 .overlay {
-
     position: absolute;
-
-    width: 100%;
-    height: 100%;
-
-    background: rgba(0, 0, 0, .45);
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
 }
 
 .hero-content {
-
     position: relative;
-
     z-index: 2;
-
     max-width: 800px;
-
-    color: white;
+    text-align: center;
+    color: #fff;
 }
 
 .tag {
@@ -251,7 +236,7 @@ body {
 
     background: white;
 
-    color: var(--dark);
+    color: var(--text-dark);
 }
 
 .btn-primary:hover,

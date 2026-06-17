@@ -73,7 +73,7 @@ body {
 
     width: 100%;
 
-    background: white;
+    background: var(--primary);
 
     box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
 
@@ -97,7 +97,6 @@ body {
 }
 
 .logo img {
-
 
     max-height: 40px;
 
@@ -124,7 +123,7 @@ body {
 
     text-decoration: none;
 
-    color: var(--text-dark);
+    color: white;
 
     font-weight: 500;
 }
@@ -135,9 +134,9 @@ body {
 
     text-decoration: none;
 
-    background: var(--primary);
+    background: white;
 
-    color: white;
+    color: black;
 
     padding: 12px 24px;
 
@@ -150,10 +149,9 @@ body {
     position: relative;
     min-height: 100vh;
 
-    background-image: url('/assets/images/fachadanew.png');
+    background-image: url('/assets/images/fachada_horizontal11.png');
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-position: top;
 
     display: flex;
     align-items: center;
@@ -282,7 +280,7 @@ body {
 
 .about {
 
-    padding: 120px 0;
+    padding: 80px 0;
 }
 
 .about-grid {
@@ -312,7 +310,6 @@ body {
 
     color: #64748b;
 
-    font-weight: 700;
 }
 
 .about-content {
@@ -384,7 +381,7 @@ body {
 
     background: #f8fafc;
 
-    padding: 120px 0;
+    padding: 80px 0;
 }
 
 .specialties-grid {
@@ -443,7 +440,7 @@ body {
 
 .differentials {
 
-    padding: 120px 0;
+    padding: 80px 0;
 }
 
 .differentials-grid {
@@ -502,7 +499,7 @@ body {
 
     background: var(--primary);
 
-    padding: 100px 0;
+    padding: 80px 0;
 }
 
 .stats-grid {
@@ -597,33 +594,60 @@ body {
 
 }
 
-/* Galeria de Imagens */
+/* Estrutura */
 
-.gallery {
-    padding: 120px 0;
-    background: #f8fafc;
+.estrutura {
+    padding: 80px 0;
 }
 
-.gallery-grid {
+.estrutura-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.gallery-item {
-    height: 250px;
-    background: #e2e8f0;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
+.estrutura-item {
+    height: 450px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.estrutura-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.descricao-estrutura {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+
+  background: rgba(255,255,255,.9);
+  backdrop-filter: blur(8px);
+
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.descricao-estrutura h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.descricao-estrutura p {
+  margin-top: 4px;
+  font-size: .9rem;
 }
 
 /* Depoimentos */
 
 .testimonials {
-    padding: 120px 0;
+    padding: 80px 0;
 }
 
 .testimonial-card {
@@ -646,7 +670,7 @@ body {
 
 .faq {
     background: #f8fafc;
-    padding: 120px 0;
+    padding: 80px 0;
 }
 
 .faq-item {
@@ -678,7 +702,7 @@ body {
     background: var(--primary);
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 80px 20px;
 }
 
 .cta h2 {
@@ -693,7 +717,7 @@ body {
 /* Contato */
 
 .contact {
-    padding: 120px 0;
+    padding: 80px 0;
 }
 
 .contact-grid {
@@ -752,7 +776,7 @@ footer li {
 
 /* Responsividade para Galeria, Contato e Footer */
 
-.gallery-grid,
+.estrutura-grid,
 .contact-grid,
 .footer-content {
     grid-template-columns: 1fr;
@@ -787,7 +811,7 @@ footer li {
 
 .header.scrolled {
 
-    background: white;
+    background: var(--primary);
 
     box-shadow: 0 8px 25px rgba(0, 0, 0, .12);
 }
